@@ -1,0 +1,13 @@
+name: nanamo
+version: 0.1.0
+
+authors:
+  - William Volin <me@williamvolin.com>
+
+targets:
+  nanamo-crystal:
+    main: src/nanamo.cr
+
+crystal: 0.35.1
+
+license: MIT
