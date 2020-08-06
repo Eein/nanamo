@@ -4,14 +4,11 @@ require "uuid"
 
 class Sim
   property actors : Hash(Symbol, Actor)
+  getter timer : Timer
 
   def initialize(timer_size : Int32 = 600000)
     @timer = Timer.new(timer_size)
     @actors = Hash(Symbol, Actor).new()
-  end
-
-  def timer
-    @timer
   end
 
   def add_actor(actor : Actor)
