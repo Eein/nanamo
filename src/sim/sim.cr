@@ -7,7 +7,7 @@ class Sim
 
   def initialize(timer_size : Int32 = 600000)
     @timer = Timer.new(timer_size)
-    @actors = Hash(Symbol, Actor).new()
+    @actors = Hash(Symbol, Actor).new
   end
 
   def timer

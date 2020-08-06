@@ -14,7 +14,7 @@ enum EventTarget
   Self
 end
 
-class Event 
+class Event
   def initialize(id : Symbol, type : EventType, target : EventTarget = EventTarget::Self)
     @type = type
     @target = target

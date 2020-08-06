@@ -13,14 +13,14 @@ sim.timer.schedule(event, 15)
 sim.timer.schedule(event, 1)
 
 while sim.timer.time <= sim.timer.size
-  sim.timer.handle_events()
+  sim.timer.handle_events
 
   # debug
-  current_time = sim.timer.time()
-  slot_events = sim.timer.count_slot()
+  current_time = sim.timer.time
+  slot_events = sim.timer.count_slot
   if slot_events > 0
     puts "[#{current_time}] : Events [#{slot_events}]"
   end
 
-  sim.timer.tick()
+  sim.timer.tick
 end

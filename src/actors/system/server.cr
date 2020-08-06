@@ -18,9 +18,7 @@ class Server < Actor
     action = new_ability_list
     action[:server_tick] = ServerTick.new
   end
-
 end
-
 
 class ServerTick
 end
