@@ -32,7 +32,8 @@ class Actor
   end
 
   # Triggers and event directly
-  # This is useful for direct side effects like server ticks
+  # This is useful for direct side effects like server ticks,
+  # executing damage on a target, or applying instant effects
   def trigger(sim, name, target = EventTarget::Self)
     case target
     when EventTarget::All
