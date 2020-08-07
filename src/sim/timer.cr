@@ -1,4 +1,5 @@
 require "./event"
+require "./sim"
 
 class Timer
   # Initialize a timer with 10m in ms
@@ -10,15 +11,15 @@ class Timer
     @size = size
   end
 
-  def handle_events
+  def handle_events(sim : Sim)
+    return unless @slots.has_key?(@time)
     events = @slots[@time]
     events.each do |event|
-      puts "---- handing #{event.type}"
+      puts "---- handing #{event.name}"
+      sim.send_event_to_actor(event)
     end
     # relying on rescues may be slower than checks
     # is likely also poor logging
-
-  rescue
   end
 
   def schedule(event : Event, time : Int32)

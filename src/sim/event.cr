@@ -15,10 +15,10 @@ enum EventTarget
 end
 
 class Event
-  property type : EventType
-  property target : EventTarget
-  def initialize(id : Symbol, type : EventType, target : EventTarget = EventTarget::Self)
-    @type = type
-    @target = target
+  property id : Symbol
+  property name : Symbol
+  def initialize(id : Symbol, name : Symbol)
+    @id = id
+    @name = name
   end
 end
