@@ -3,7 +3,7 @@ require "./sim/sim"
 require "./actors/actors"
 require "./actors/system/server"
 
-sim = Sim.new(25)
+sim = Sim.new(300)
 
 server = Server.new
 

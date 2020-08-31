@@ -16,7 +16,12 @@ class Server < Actor
 
   def event_map(sim)
     @event_map[:server_tick] = -> { trigger(sim, :tick, EventTarget::All) }
-    @event_map[:tick] = -> { puts "Tick"; return true }
+    @event_map[:tick] = -> {
+      # schedule a new tick on the tick
+      puts "Server is ticking";
+      sim.timer.schedule(Event.new(self.id, :server_tick), sim.timer.time + 3)
+      return true
+    }
     @event_map
   end
 end
