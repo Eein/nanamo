@@ -11,6 +11,6 @@ class Job < Actor
   end
 
   def event_map(sim)
-    super
+    @event_map = super
   end
 end
