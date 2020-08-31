@@ -3,11 +3,13 @@ require "./sim/sim"
 require "./actors/actors"
 require "./actors/system/server"
 
-sim = Sim.new(300)
+sim = Sim.new(30)
 
-server = Server.new
-
+server = Server.new(:server)
 sim.add_actor(server)
+
+job = Job.new(:job)
+sim.add_actor(job)
 
 while sim.timer.time <= sim.timer.size
   # Handle the current events the sim has on the current timer tick

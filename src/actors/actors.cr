@@ -1,2 +1,2 @@
+require "./jobs/job/core"
 require "./system/server"
-require "./jobs/dancer"
