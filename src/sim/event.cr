@@ -5,6 +5,11 @@ enum EventType
   ServerTick
 end
 
+enum TickType
+  Standard
+  Regen
+end
+
 enum EventTarget
   All
   AllEnemies

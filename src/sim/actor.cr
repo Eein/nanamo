@@ -19,6 +19,7 @@ class Actor
   def event_map(sim)
     @event_map[:tick] = -> { puts "#{self.id} :: tick"; true }
     @event_map[:wait] = -> { puts "waiting"; true }
+    @event_map[:regen_tick] = -> { true }
     @event_map
   end
 

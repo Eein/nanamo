@@ -18,8 +18,6 @@ class Timer
       puts "---- handing #{event.name}"
       sim.send_event_to_actor(event)
     end
-    # relying on rescues may be slower than checks
-    # is likely also poor logging
   end
 
   def schedule(event : Event, time : Int32)
@@ -33,6 +31,8 @@ class Timer
 
   # debug
   def count_slot
+    # relying on rescues may be slower than checks
+    # is likely also poor logging
     begin
       @slots[@time].size
     rescue
